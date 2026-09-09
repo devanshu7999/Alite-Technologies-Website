@@ -129,7 +129,7 @@ const portfolioData = [
     featured: false,
     thumbnail: "works/Reels-Videos_samples/bo-reel-ss.png",
     gallery: [],
-    videoUrl: "works/Reels-Videos_samples/Blue_oven_work.mp4",
+    videoUrl: "works/Reels-Videos_samples/Blue_oven_work.MP4",
     description: "High-energy promotional videos and product showcases edited with dynamic cuts, beat-synced transitions, and bold typography overlays.",
     caseStudy: {
       overview: "Multiple clients needed short-form promotional videos to showcase their products and services across social media platforms.",
