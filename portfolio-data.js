@@ -184,7 +184,7 @@ const portfolioData = [
     featured: false,
     thumbnail: "works/Branding_samples/Logo/swastiq-logo-thumbnail.png",
     gallery: [
-      "works/Branding_samples/Logo/SWASTIQ-logo.png",
+      "works/Branding_samples/Logo/swastiq-logo-thumbnail.png",
       "works/Websites_samples/Swastiq/1-swastiq.png",
       "works/Websites_samples/Swastiq/4-swastiq.png"
     ],
