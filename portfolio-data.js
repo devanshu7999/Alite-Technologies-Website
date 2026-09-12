@@ -43,14 +43,11 @@ const portfolioData = [
     featured: false,
     thumbnail: "works/Websites_samples/Swastiq/1-swastiq.png",
     gallery: [
-      "works/Websites_samples/Swastiq/1-swastiq.png",
-      "works/Websites_samples/Swastiq/2-swastiq.png",
-      "works/Websites_samples/Swastiq/3-swastiq.png",
-      "works/Websites_samples/Swastiq/4-swastiq.png",
-      "works/Websites_samples/Swastiq/5-swastiq.png",
-      "works/Websites_samples/Swastiq/6-swastiq.png",
-      "works/Websites_samples/Swastiq/7-swastiq.png",
-      "works/Websites_samples/Swastiq/8-swastiq.png"
+      "works/Websites_samples/Swastiq/swastiq-imgs/1.png",
+      "works/Websites_samples/Swastiq/swastiq-imgs/2.png",
+      "works/Websites_samples/Swastiq/swastiq-imgs/3.png",
+      "works/Websites_samples/Swastiq/swastiq-imgs/4.png",
+      "works/Websites_samples/Swastiq/swastiq-imgs/5.png"
     ],
     videoUrl: "",
     description: "A modern, responsive business website for a leading chemical manufacturing corporation with product catalogues, about section, and brochure downloads.",
@@ -320,6 +317,63 @@ const portfolioData = [
       results: "A professional, print-ready business card that makes a strong first impression.",
       technologies: ["Adobe Illustrator", "Photoshop"],
       projectUrl: ""
+    }
+  },
+  {
+    id: "flexforce-brochure",
+    name: "FlexForce Sales Brochure",
+    category: "branding",
+    categoryLabel: "Branding & Visual Design",
+    service: "Brochure design",
+    client: "FlexForce",
+    featured: false,
+    thumbnail: "works/Branding_samples/Logo/flexforce-thumbnail.png",
+    gallery: [
+      "works/Branding_samples/Brochures/FlexForce-b-imgs/1.png",
+      "works/Branding_samples/Brochures/FlexForce-b-imgs/2.png",
+      "works/Branding_samples/Brochures/FlexForce-b-imgs/3.png",
+      "works/Branding_samples/Brochures/FlexForce-b-imgs/4.png",
+      "works/Branding_samples/Brochures/FlexForce-b-imgs/5.png"
+    ],
+    videoUrl: "",
+    description: "A professional, multi-page sales brochure for FlexForce — a sales outsourcing company — designed to communicate their service offerings, team expertise, and client value proposition with compelling visuals and structured layouts.",
+    caseStudy: {
+      overview: "FlexForce, a sales outsourcing firm, needed a polished brochure that could be used in client meetings, trade shows, and digital pitches. The brochure had to clearly communicate their outsourced sales model, team capabilities, and the tangible ROI they deliver to clients.",
+      objective: "Design a visually engaging, print-ready and digital-ready sales brochure that positions FlexForce as a trusted partner for sales outsourcing — with clear messaging, strong infographics, and a professional layout.",
+      solution: "We crafted a multi-page brochure with a bold blue-and-black design language consistent with the FlexForce brand. The brochure features an impactful cover, service breakdowns with icons and infographics, client testimonial sections, team highlights, and a strong call-to-action page. Every spread was designed for both print and PDF distribution.",
+      services: ["Brochure Design", "Print Layout", "Infographic Design", "Copywriting Direction", "Brand Collateral"],
+      results: "A compelling sales brochure adopted across client presentations, trade events, and digital outreach — strengthening FlexForce's pitch and closing rate.",
+      technologies: ["Adobe InDesign", "Illustrator", "Photoshop"],
+      projectUrl: "works/Branding_samples/Brochures/FlexForce-Sales-Outsourcing-Brochure.pdf"
+    }
+  },
+  {
+    id: "nexon-inc-brochure",
+    name: "Nexon Inc Polymer Additives Brochure",
+    category: "branding",
+    categoryLabel: "Branding & Visual Design",
+    service: "Brochure design",
+    client: "Nexon Inc",
+    featured: false,
+    thumbnail: "works/Branding_samples/Logo/nexon-logo-thumbnail.png",
+    gallery: [
+      "works/Branding_samples/Brochures/Nexon-b-imgs/1.png",
+      "works/Branding_samples/Brochures/Nexon-b-imgs/2.png",
+      "works/Branding_samples/Brochures/Nexon-b-imgs/3.png",
+      "works/Branding_samples/Brochures/Nexon-b-imgs/4.png",
+      "works/Branding_samples/Brochures/Nexon-b-imgs/5.png",
+      "works/Branding_samples/Brochures/Nexon-b-imgs/6.png"
+    ],
+    videoUrl: "",
+    description: "A detailed product brochure for Nexon Inc — a polymer additives manufacturer — showcasing their product catalogue, technical specifications, and industry expertise in a clean, professional format.",
+    caseStudy: {
+      overview: "Nexon Inc, a polymer additives manufacturer and supplier, required a product-focused brochure that could serve as a comprehensive reference for potential buyers, distributors, and trade show visitors. The brochure needed to balance technical depth with visual appeal.",
+      objective: "Create a print-ready and digital product brochure that showcases Nexon Inc's polymer additives range with clear categorisation, technical details, and a professional design that builds credibility in the industrial chemicals sector.",
+      solution: "We designed a structured, multi-page brochure with a clean industrial aesthetic. The layout features a bold cover, an overview of the company's capabilities, product category breakdowns with specifications, application guides, and contact information. Colour-coded sections and clear typography ensure easy navigation through technical content.",
+      services: ["Brochure Design", "Product Catalogue Layout", "Technical Illustration", "Print Design", "Brand Collateral"],
+      results: "A professional product brochure used across distributor networks, trade exhibitions, and client meetings — serving as a key sales enablement tool for Nexon Inc.",
+      technologies: ["Adobe InDesign", "Illustrator", "Photoshop"],
+      projectUrl: "works/Branding_samples/Brochures/Nexon Inc - Polymer Additives-Brochure.pdf"
     }
   },
 

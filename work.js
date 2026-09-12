@@ -247,14 +247,20 @@
 
     // Gallery
     if (project.gallery && project.gallery.length) {
+      const totalImages = project.gallery.length;
       html += `
         <div class="modal-section-title">Project Gallery</div>
-        <div class="modal-gallery">
-          ${project.gallery.map((img, i) => `
-            <div class="modal-gallery-item">
-              <img src="${img}" alt="${project.name} screenshot ${i + 1}" loading="lazy" />
-            </div>
-          `).join("")}
+        <div class="modal-gallery-wrap">
+          ${totalImages > 1 ? `<button class="gallery-nav prev" aria-label="Previous image" data-dir="-1">&#8249;</button>` : ""}
+          <div class="modal-gallery">
+            ${project.gallery.map((img, i) => `
+              <div class="modal-gallery-item" data-index="${i}">
+                <img src="${img}" alt="${project.name} screenshot ${i + 1}" loading="lazy" />
+              </div>
+            `).join("")}
+          </div>
+          ${totalImages > 1 ? `<button class="gallery-nav next" aria-label="Next image" data-dir="1">&#8250;</button>` : ""}
+          ${totalImages > 1 ? `<div class="gallery-counter">1 / ${totalImages}</div>` : ""}
         </div>
       `;
     }
@@ -276,16 +282,79 @@
     }
 
     if (cs.projectUrl) {
+      const isPDF = cs.projectUrl.toLowerCase().endsWith(".pdf");
+      const linkLabel = isPDF ? "View Brochure" : "Visit Live Project";
       html += `
         <div style="margin-top:32px">
           <a class="btn btn-primary modal-project-link" href="${cs.projectUrl}" target="_blank" rel="noopener">
-            Visit Live Project <span>↗</span>
+            ${linkLabel} <span>↗</span>
           </a>
         </div>
       `;
     }
 
     modalBody.innerHTML = html;
+
+    // Initialize gallery carousel navigation
+    const galleryWrap = modalBody.querySelector(".modal-gallery-wrap");
+    if (galleryWrap) {
+      let currentSlide = 0;
+      const galleryEl = galleryWrap.querySelector(".modal-gallery");
+      const items = galleryWrap.querySelectorAll(".modal-gallery-item");
+      const total = items.length;
+      const counter = galleryWrap.querySelector(".gallery-counter");
+      const prevBtn = galleryWrap.querySelector(".gallery-nav.prev");
+      const nextBtn = galleryWrap.querySelector(".gallery-nav.next");
+
+      // Set gallery height dynamically based on first image
+      const firstImg = items[0].querySelector("img");
+      function setGalleryHeight() {
+        const img = firstImg;
+        if (img.naturalWidth && img.naturalHeight) {
+          const ratio = img.naturalHeight / img.naturalWidth;
+          // Portrait images (like brochures): taller gallery
+          // Landscape images (like website screenshots): shorter but wider
+          if (ratio > 1) {
+            galleryEl.style.height = "520px";
+          } else if (ratio > 0.6) {
+            galleryEl.style.height = "420px";
+          } else {
+            galleryEl.style.height = "360px";
+          }
+        } else {
+          galleryEl.style.height = "400px";
+        }
+      }
+
+      if (firstImg.complete) {
+        setGalleryHeight();
+      } else {
+        firstImg.addEventListener("load", setGalleryHeight);
+        galleryEl.style.height = "400px"; // default until loaded
+      }
+
+      function updateGallery() {
+        items.forEach(item => {
+          item.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+        if (counter) counter.textContent = `${currentSlide + 1} / ${total}`;
+        if (prevBtn) prevBtn.disabled = currentSlide === 0;
+        if (nextBtn) nextBtn.disabled = currentSlide === total - 1;
+      }
+
+      updateGallery();
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+          if (currentSlide > 0) { currentSlide--; updateGallery(); }
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+          if (currentSlide < total - 1) { currentSlide++; updateGallery(); }
+        });
+      }
+    }
 
     // Show modal
     modalOverlay.hidden = false;
