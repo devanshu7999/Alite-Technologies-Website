@@ -328,12 +328,12 @@ const portfolioData = [
     client: "FlexForce",
     featured: false,
     thumbnail: "works/Branding_samples/Logo/flexforce-thumbnail.png",
-    gallery: [
-      "works/Branding_samples/Brochures/FlexForce-b-imgs/1.png",
-      "works/Branding_samples/Brochures/FlexForce-b-imgs/2.png",
-      "works/Branding_samples/Brochures/FlexForce-b-imgs/3.png",
-      "works/Branding_samples/Brochures/FlexForce-b-imgs/4.png",
-      "works/Branding_samples/Brochures/FlexForce-b-imgs/5.png"
+    gallery: [ 
+      "works/Branding_samples/Brochures/Flexforce-b-imgs/1.png",
+      "works/Branding_samples/Brochures/Flexforce-b-imgs/2.png",
+      "works/Branding_samples/Brochures/Flexforce-b-imgs/3.png",
+      "works/Branding_samples/Brochures/Flexforce-b-imgs/4.png",
+      "works/Branding_samples/Brochures/Flexforce-b-imgs/5.png"
     ],
     videoUrl: "",
     description: "A professional, multi-page sales brochure for FlexForce — a sales outsourcing company — designed to communicate their service offerings, team expertise, and client value proposition with compelling visuals and structured layouts.",
