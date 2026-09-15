@@ -701,6 +701,87 @@
   .modal-hero {
     height: 220px;
   }
+
+  /* Gallery mobile adjustments */
+  .modal-gallery {
+    min-height: 200px;
+    border-radius: 10px;
+  }
+
+  .modal-gallery-item {
+    padding: 12px;
+  }
+
+  .modal-gallery-item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .gallery-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .gallery-nav.prev {
+    left: 6px;
+  }
+
+  .gallery-nav.next {
+    right: 6px;
+  }
+
+  .gallery-counter {
+    font-size: 0.8rem;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-panel {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+  .modal-body {
+    padding: 20px 16px 30px;
+  }
+  .modal-hero {
+    height: 180px;
+  }
+
+  .modal-gallery {
+    min-height: 160px;
+    border-radius: 8px;
+  }
+
+  .modal-gallery-item {
+    padding: 8px;
+  }
+
+  .modal-gallery-item img {
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .gallery-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .gallery-nav.prev {
+    left: 4px;
+  }
+
+  .gallery-nav.next {
+    right: 4px;
+  }
+
+  .gallery-counter {
+    font-size: 0.75rem;
+    margin-top: 6px;
+  }
 }
 
 /* 7. Work CTA Section */

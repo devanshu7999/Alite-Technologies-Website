@@ -306,23 +306,26 @@
       const prevBtn = galleryWrap.querySelector(".gallery-nav.prev");
       const nextBtn = galleryWrap.querySelector(".gallery-nav.next");
 
-      // Set gallery height dynamically based on first image
+      // Set gallery height dynamically based on first image and screen size
       const firstImg = items[0].querySelector("img");
       function setGalleryHeight() {
         const img = firstImg;
+        const isMobile = window.innerWidth <= 480;
+        const isTablet = window.innerWidth <= 760;
+
         if (img.naturalWidth && img.naturalHeight) {
           const ratio = img.naturalHeight / img.naturalWidth;
           // Portrait images (like brochures): taller gallery
           // Landscape images (like website screenshots): shorter but wider
           if (ratio > 1) {
-            galleryEl.style.height = "520px";
+            galleryEl.style.height = isMobile ? "340px" : isTablet ? "420px" : "520px";
           } else if (ratio > 0.6) {
-            galleryEl.style.height = "420px";
+            galleryEl.style.height = isMobile ? "280px" : isTablet ? "340px" : "420px";
           } else {
-            galleryEl.style.height = "360px";
+            galleryEl.style.height = isMobile ? "220px" : isTablet ? "280px" : "360px";
           }
         } else {
-          galleryEl.style.height = "400px";
+          galleryEl.style.height = isMobile ? "260px" : "400px";
         }
       }
 
@@ -330,8 +333,11 @@
         setGalleryHeight();
       } else {
         firstImg.addEventListener("load", setGalleryHeight);
-        galleryEl.style.height = "400px"; // default until loaded
+        galleryEl.style.height = window.innerWidth <= 480 ? "260px" : "400px";
       }
+
+      // Recalculate on resize
+      window.addEventListener("resize", setGalleryHeight);
 
       function updateGallery() {
         items.forEach(item => {
