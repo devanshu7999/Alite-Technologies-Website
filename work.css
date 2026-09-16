@@ -526,9 +526,11 @@
 
 .modal-section-title::before {
   content: "";
-  width: 22px;
-  height: 2px;
+  width: 8px;
+  height: 8px;
   background: var(--blue);
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .modal-body .modal-text {

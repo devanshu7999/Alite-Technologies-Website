@@ -328,7 +328,7 @@ const portfolioData = [
     client: "FlexForce",
     featured: false,
     thumbnail: "works/Branding_samples/Logo/flexforce-thumbnail.png",
-    gallery: [ 
+    gallery: [
       "works/Branding_samples/Brochures/Flexforce-b-imgs/1.png",
       "works/Branding_samples/Brochures/Flexforce-b-imgs/2.png",
       "works/Branding_samples/Brochures/Flexforce-b-imgs/3.png",
